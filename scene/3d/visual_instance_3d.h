@@ -43,7 +43,7 @@ class VisualInstance3D : public Node3D {
 	RID instance;
 	uint32_t layers = 1;
 	float sorting_offset = 0.0;
-	bool sorting_use_aabb_center = true;
+	bool sorting_use_aabb_center = false;
 
 protected:
 	void _update_visibility();

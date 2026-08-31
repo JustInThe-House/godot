@@ -66,7 +66,7 @@ private:
 	List<SpriteBase3D *> children;
 	List<SpriteBase3D *>::Element *pI = nullptr;
 
-	bool centered = true;
+	bool centered = false;
 	Point2 offset;
 
 	bool hflip = false;
@@ -86,13 +86,13 @@ private:
 	RID last_texture;
 
 	bool flags[FLAG_MAX] = {};
-	AlphaCutMode alpha_cut = ALPHA_CUT_DISABLED;
+	AlphaCutMode alpha_cut = ALPHA_CUT_DISCARD;
 	float alpha_scissor_threshold = 0.5;
 	float alpha_hash_scale = 1.0;
 	StandardMaterial3D::AlphaAntiAliasing alpha_antialiasing_mode = StandardMaterial3D::ALPHA_ANTIALIASING_OFF;
 	float alpha_antialiasing_edge = 0.0f;
 	StandardMaterial3D::BillboardMode billboard_mode = StandardMaterial3D::BILLBOARD_DISABLED;
-	StandardMaterial3D::TextureFilter texture_filter = StandardMaterial3D::TEXTURE_FILTER_LINEAR_WITH_MIPMAPS;
+	StandardMaterial3D::TextureFilter texture_filter = StandardMaterial3D::TEXTURE_FILTER_NEAREST_WITH_MIPMAPS;
 	bool redraw_needed = false;
 	bool pending_update = false;
 	void _im_update();
