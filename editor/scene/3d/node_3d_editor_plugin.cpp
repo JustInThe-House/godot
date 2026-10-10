@@ -3167,7 +3167,7 @@ void Node3DEditor::_load_default_preview_settings() {
 	// On any not-tidally-locked planet, a sun would have an angular altitude
 	// of 60 degrees as the average of all points on the sphere at noon.
 	// The azimuth choice is arbitrary, but ideally shouldn't be on an axis.
-	sun_rotation = Vector2(-Math::deg_to_rad(60.0), Math::deg_to_rad(150.0));
+	sun_rotation = Vector2(-Math::deg_to_rad(0.0), Math::deg_to_rad(180.0));
 
 	sun_angle_altitude->set_value_no_signal(-Math::rad_to_deg(sun_rotation.x));
 	sun_angle_azimuth->set_value_no_signal(180.0 - Math::rad_to_deg(sun_rotation.y));
@@ -3184,7 +3184,7 @@ void Node3DEditor::_load_default_preview_settings() {
 	sun_shadow_max_distance->set_value_no_signal(100);
 
 	sun_color->set_pick_color(Color(1, 1, 1));
-	sun_energy->set_value_no_signal(1.0);
+	sun_energy->set_value_no_signal(0.93);
 
 	sun_environ_updating = false;
 }
