@@ -1336,6 +1336,8 @@ MaterialStorage::MaterialStorage() {
 		actions.renames["CUSTOM2"] = "custom2_attrib";
 		actions.renames["CUSTOM3"] = "custom3_attrib";
 		actions.renames["LIGHT_VERTEX"] = "light_vertex";
+		actions.renames["TEXTURE_SIZE"] = "texture_size";
+		actions.renames["LIGHT_UV"] = "light_uv";
 
 		actions.renames["NODE_POSITION_WORLD"] = "model_matrix[3].xyz";
 		actions.renames["CAMERA_POSITION_WORLD"] = "scene_data_block.data.inv_view_matrix[3].xyz";
@@ -1389,6 +1391,8 @@ MaterialStorage::MaterialStorage() {
 		actions.usage_defines["INSTANCE_CUSTOM"] = "#define ENABLE_INSTANCE_CUSTOM\n";
 		actions.usage_defines["POSITION"] = "#define OVERRIDE_POSITION\n";
 		actions.usage_defines["LIGHT_VERTEX"] = "#define LIGHT_VERTEX_USED\n";
+		actions.usage_defines["TEXTURE_SIZE"] = "#define TEXTURE_SIZE_USED\n";
+		actions.usage_defines["LIGHT_UV"] = "#define LIGHT_UV_USED\n";
 		actions.usage_defines["Z_CLIP_SCALE"] = "#define Z_CLIP_SCALE_USED\n";
 		actions.usage_defines["LIGHT_AREA_DIFFUSE_MULTIPLIER"] = "#define AREA_LIGHT_CODE_USED\n";
 		actions.usage_defines["LIGHT_AREA_SPECULAR_MULTIPLIER"] = "@LIGHT_AREA_DIFFUSE_MULTIPLIER";
